@@ -1,0 +1,162 @@
+@font-face {
+  font-family: YuGothicM;
+  src: local("Yu Gothic Medium");
+}
+
+
+* {
+  color: #222;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-family: CoconPro;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.1rem;
+  color: #12003e;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+header {
+  padding-bottom: 156px;
+  .topLogo .logoOuter {
+    h1 {
+      display: none;
+      text-indent: -10000;
+    }
+    a {
+      display: inline-block;
+    }
+    .fname .initial, .lname .initial {}
+  }
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  .area {
+    position: relative;
+    width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+    .areaTitle {}
+    .mainArea {
+      padding-top: 56px;
+    }
+  }
+  nav {
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    font-size: 1.6rem;
+    z-index: 10;
+    .navList .navItem {
+      position: relative;
+      text-align: center;
+      + .navItem {
+        margin-top: 61px;
+      }
+      a {
+        opacity: 0;
+        transition: .25s ease-out 0s;
+      }
+      &:hover a {
+        opacity: 1;
+      }
+      .rectbox {
+        /* display: block; */
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: #12003e;
+        transform: rotate(45deg);
+        margin: auto;
+        /* opacity: 1; */
+        &.fadeOut {
+          animation: .5s forwards;
+          animation-name: fadeout;
+        }
+        &.fadeIn {
+          animation: .5s forwards;
+          animation-name: fadein;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeout {
+  from {
+    transform: rotate(45deg);
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+
+  to {
+    transform: rotate(405deg);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}
+
+
+@keyframes fadein {
+  from {
+    transform: rotate(405deg);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  to {
+    transform: rotate(45deg);
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+}
+
+
+/* 992pxä»¥ä¸Š  vw@1080px*/
+@media (min-width: 992px) {}
+
+/* 1200pxä»¥ä¸Š */
+@media (min-width: 1200px) {}
+
+@media (min-width: 1680px) {}

@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+header {
+  padding-bottom: 0;
+}
+
+.container {
+  .area {
+    .mainArea {
+      padding-top: 0;
+    }
+    .areaTitle {
+      padding-top: 64px;
+      &.fixed {
+        position: fixed;
+        top: 0;
+        left: 15%;
+      }
+      .roleArea {
+        padding: 18px 0 12px;
+        .role {
+          font-size: 1.4rem;
+          + .role {
+            padding-left: 12px;
+          }
+        }
+      }
+      time {
+        font-size: 1.0rem;
+      }
+      .siteLink {
+        display: block;
+        width: 48px;
+        height: 24px;
+        background: #12003e;
+        text-align: center;
+        margin-top: 18px;
+        a {
+          display: block;
+          font-size: 1.2rem;
+          color: #fff;
+          line-height: 24px;
+          font-weight: 800;
+        }
+      }
+    }
+    .mainArea {
+      /* padding-top: 200px; */
+      width: 100%;
+      height: auto;
+      .inner {
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        .deviceImgArea {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          .pcArea .pcImg img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+          }
+          .spArea .spImg img {
+            width: 70%;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+    .detailArea {
+      width: 100%;
+      .textArea {
+        width: 70%;
+        margin: 32px auto;
+        p {
+          font-size: 1.6rem;
+          line-height: 1.9;
+        }
+      }
+      .captureList {
+        width: 70%;
+        margin: 0 auto;
+        .captureItem {
+          + .captureItem {
+            margin-top: 32px;
+          }
+          img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+    .otherWorks {
+      position: relative;
+      width: 70%;
+      height: auto;
+      margin: 0 auto;
+      .head {
+        padding-top: 64px;
+        h3 {
+          font-family: CoconPro;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 2.1rem;
+          color: #12003e;
+        }
+      }
+      .worksArea {
+        /* padding-top: 200px; */
+        width: 100%;
+        height: 100vh;
+        .inner {
+          width: 100%;
+          height: 100vh;
+          position: relative;
+          top: 100px;
+          overflow: hidden;
+          .imgList {
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+            position: absolute;
+            .imgItem {
+              width: 60%;
+              max-width: 100%;
+              height: auto;
+              margin: auto;
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              a {
+                display: block;
+                img {
+                  width: 100%;
+                  max-width: 100%;
+                  height: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  nav .navItem:nth-child(3) {
+    a {
+      opacity: 1;
+      display: block;
+      color: #fd5f00;
+      cursor: default;
+    }
+    .rectbox {
+      opacity: 0;
+      display: none;
+    }
+  }
+}
+
+/* areaTitle */
+
+/* [END] areaTitle */
+
+/* mainArea */
+
+/* [END]mainArea */
+
+/* detailArea */
+
+/* [END] detailArea */
+
+/* otherWorks */
+
+/* [END] otherWorks */
+
+/* nav */
+
+/* [END] nav */
+
+/* 992pxä»¥ä¸Š  vw@1080px*/
+@media (min-width: 992px) {}
+
+/* 1200pxä»¥ä¸Š */
+@media (min-width: 1200px) {}
+
+@media (min-width: 1680px) {}

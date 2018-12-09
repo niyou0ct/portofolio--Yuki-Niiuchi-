@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/* .container .area .mainArea{
+  padding-top: 200px;
+} */
+
+.container {
+  .area .mainArea .inner {
+    display: flex;
+    justify-content: space-between;
+    .textArea {
+      width: 45%;
+      p {
+        font-size: 1.6rem;
+        line-height: 2.0;
+      }
+    }
+  }
+  nav .navItem:nth-child(1) {
+    a {
+      opacity: 1;
+      display: block;
+      color: #fd5f00;
+      cursor: default;
+    }
+    .rectbox {
+      opacity: 0;
+      display: none;
+    }
+  }
+}
+
+/* nav */
+
+/* [END] nav */
+
+/* 992pxä»¥ä¸Š  vw@1080px*/
+@media (min-width: 992px) {}
+
+/* 1200pxä»¥ä¸Š */
+@media (min-width: 1200px) {}
+
+@media (min-width: 1680px) {}

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.container .firstView {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .firstInner {
+    position: absolute;
+    z-index: 10000000;
+    .leadText {
+      text-align: center;
+      p span {
+        font-family: CoconPro;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 5.6rem;
+        color: #12003e;
+        &:last-child {
+          position: relative;
+          top: 64px;
+          margin-left: -64px;
+        }
+      }
+    }
+    .mainTitle {
+      padding-top: 92px;
+      .infoList {
+        text-align: center;
+        h1 {
+          font-size: 1.6rem;
+          margin-bottom: 13px;
+        }
+        p {
+          font-size: 2.1rem;
+        }
+      }
+    }
+  }
+}
+
+/* 992pxä»¥ä¸Š  vw@1080px*/
+@media (min-width: 992px) {}
+
+/* 1200pxä»¥ä¸Š */
+@media (min-width: 1200px) {}
+
+@media (min-width: 1680px) {}
