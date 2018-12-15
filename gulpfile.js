@@ -86,19 +86,28 @@ gulp.task('js.uglify', ['js.concat'], function() {
 
 
 //gulpコマンド入力時にローカルサーバーを立ち上げる処理
+// gulp.task('server', function() {
+//   connect.server({
+//     port:8888,
+//     base:'./'
+//   }, function (){
+//     browser({
+//       proxy: 'localhost:8888'
+//     });
+//   });
+// });
+
 gulp.task('server', function() {
-  connect.server({
-    port:8888,
-    base:'./'
-  }, function (){
-    browserSync({
-      proxy: 'localhost:8888'
-    });
+  browser.init({
+    port: 8889,
+    server: {
+      baseDir: './'
+    }
   });
 });
 
 gulp.task('browser-reload', function(){
-  browserSync.reload();
+  browser.reload();
 });
 
 // watch
@@ -113,10 +122,10 @@ gulp.task('watch', function(){
 
 
 // commonタスクをまとめる
-gulp.task('common', ['sass', 'html', 'babel', 'js.vendor', 'assets', 'watch', 'server']);
+gulp.task('common', ['sass', 'php', 'babel', 'js.vendor', 'assets', 'watch', 'server']);
 
 // serverなしのタスクをまとめる
-gulp.task('run', ['sass', 'html', 'babel', 'js.vendor', 'assets', 'watch']);
+gulp.task('run', ['sass', 'php', 'babel', 'js.vendor', 'assets', 'watch']);
 
 // 監視して処理するのをひとまとめにしておく。
 gulp.task('js', ['js.concat', 'js.uglify']);

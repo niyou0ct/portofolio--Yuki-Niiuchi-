@@ -5,8 +5,9 @@ Template Name: about
 ?>
 
 <?php get_header(); ?>
-
 <main data-namespace="about" class="barba-container">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/min/about.min.css">
+  
   <section class="area">
    <div class="areaTitle">
      <h2>front end designer</h2>

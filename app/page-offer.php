@@ -5,8 +5,9 @@ Template Name: offer
 ?>
 
 <?php get_header(); ?>
-
 <main data-namespace="offer" class="barba-container">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/min/offer.min.css">
+  
   <section class="area">
    <div class="areaTitle">
      <h2>website × marketing</h2>

@@ -5,8 +5,9 @@ Template Name: form
 ?>
 
 <?php get_header(); ?>
-
 <main data-namespace="form" class="barba-container">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/min/form.min.css">
+  
   <section class="area">
    <div class="areaTitle">
      <h2>Contact</h2>
