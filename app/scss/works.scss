@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import 'reset';
+@import 'common';
 
 header {
   padding-bottom: 0;
@@ -47,17 +49,17 @@ header {
       }
     }
   }
-  nav .navItem:nth-child(3) {
-    a {
-      opacity: 1;
-      display: block;
-      color: #fd5f00;
-      cursor: default;
-    }
-    .rectbox {
-      opacity: 0;
-      display: none;
-    }
+}
+nav .navItem:nth-child(3) {
+  a {
+    opacity: 1;
+    display: block;
+    color: $navSelectedColor;
+    cursor: default;
+  }
+  .rectbox {
+    opacity: 0;
+    display: none;
   }
 }
 

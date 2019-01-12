@@ -1,5 +1,4 @@
   <?php wp_footer(); ?>
-</div>
   <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/min/app.min.js"></script>
   <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/min/nav.min.js"></script>
   <?php if(is_front_page()): ?>

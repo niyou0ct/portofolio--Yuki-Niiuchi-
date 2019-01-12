@@ -2,13 +2,25 @@
   font-family: YuGothicM;
   src: local("Yu Gothic Medium");
 }
+$leadFont: 'Ubuntu', sans-serif;
+$mainColor: #12003e;
+$mainFontSize: 1.4rem;
+$bigFontSize: 4.8rem;
+$middleFontSize: 2rem;
+$navSelectedColor: #fd5f00;
+$mainSpace: 56px;
+$middleSpace: 40px;
+$smallSpace: 24px;
+$bigSpace: 72px;
+$topSpace: 210px;
+$mainLineHeight: 2.0;
 
 
 * {
   color: #222;
 }
 
-html {
+html, body {
   font-size: 62.5%;
   overflow-x: hidden;
 }
@@ -26,10 +38,10 @@ a {
 }
 
 h2 {
-  font-family: CoconPro;
+  font-family: $leadFont;
   font-style: normal;
   font-weight: 800;
-  font-size: 2.1rem;
+  font-size: $bigFontSize;
   color: #12003e;
 }
 
@@ -42,17 +54,63 @@ canvas {
   z-index: 0;
 }
 
+
 header {
-  padding-bottom: 156px;
-  .topLogo .logoOuter {
-    h1 {
-      display: none;
-      text-indent: -10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  width: 90%;
+  margin: 0 auto;
+  padding: 32px 0 0 0;
+  z-index: 100;
+  .topLogo{
+    .logoOuter{
+      a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .logo{
+        width: 72px;
+        img{
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      .myInfo{
+        margin: 0 0 0 24px;
+        div{
+          margin: 8px 0;
+        }
+        span{
+          font-family: $leadFont;
+          font-size: 1.8rem;
+        }
+
+      }
     }
-    a {
-      display: inline-block;
+  }
+  .snsArea{
+    .snsList{
+      display: flex;
+      align-items: center;
+      .sns{
+        width: 30px;
+        img{
+          width: 100%;
+          max-width: 100%;
+          height:auto;
+        }
+        +.sns{
+          margin: 0 0 0 20px;
+        }
+      }
     }
-    .fname .initial, .lname .initial {}
   }
 }
 
@@ -60,56 +118,65 @@ header {
   width: 100%;
   height: auto;
   margin: 0 auto;
+  main{
+    margin: $topSpace 0 0 0;
+  }
   .area {
     position: relative;
+    display: flex;
+    justify-content: center;
     width: 70%;
-    height: 100vh;
     margin: 0 auto;
+    +.area{
+      margin: $bigSpace auto 0;
+    }
     .areaTitle {}
     .mainArea {
-      padding-top: 56px;
+      padding-top: $mainSpace;
     }
   }
-  nav {
-    position: absolute;
-    top: 35%;
-    right: 5%;
-    font-size: 1.6rem;
-    z-index: 10;
-    .navList .navItem {
-      position: relative;
-      text-align: center;
-      + .navItem {
-        margin-top: 61px;
+}
+
+nav {
+  position: fixed;
+  top: 25%;
+  right: 5%;
+  font-size: 1.6rem;
+  z-index: 10;
+  .navList .navItem {
+    position: relative;
+    text-align: center;
+    + .navItem {
+      margin-top: 61px;
+    }
+    a {
+      font-family: $leadFont;
+      opacity: 0;
+      transition: .25s ease-out 0s;
+    }
+    &:hover a {
+      opacity: 1;
+    }
+    .rectbox {
+      /* display: block; */
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: $mainColor;
+      transform: rotate(45deg);
+      margin: auto;
+      /* opacity: 1; */
+      &.fadeOut {
+        animation: .5s forwards;
+        animation-name: fadeout;
       }
-      a {
-        opacity: 0;
-        transition: .25s ease-out 0s;
-      }
-      &:hover a {
-        opacity: 1;
-      }
-      .rectbox {
-        /* display: block; */
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background: #12003e;
-        transform: rotate(45deg);
-        margin: auto;
-        /* opacity: 1; */
-        &.fadeOut {
-          animation: .5s forwards;
-          animation-name: fadeout;
-        }
-        &.fadeIn {
-          animation: .5s forwards;
-          animation-name: fadein;
-        }
+      &.fadeIn {
+        animation: .5s forwards;
+        animation-name: fadein;
       }
     }
   }
@@ -151,6 +218,8 @@ header {
     display: block;
   }
 }
+
+
 
 
 /* 992pxä»¥ä¸Š  vw@1080px*/

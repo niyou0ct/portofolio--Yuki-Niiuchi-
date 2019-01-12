@@ -1,5 +1,6 @@
 @charset "UTF-8";
-
+@import 'reset';
+@import 'common';
 
 .container .firstView {
   width: 100%;
@@ -13,35 +14,40 @@
     .leadText {
       text-align: center;
       p span {
-        font-family: CoconPro;
+        font-family: $leadFont;
         font-style: normal;
         font-weight: 800;
         font-size: 5.6rem;
-        color: #12003e;
-        &:last-child {
-          position: relative;
-          top: 64px;
-          margin-left: -64px;
-        }
+        color: $mainColor;
+        line-height: 1.2;
       }
     }
     .mainTitle {
-      padding-top: 92px;
+      padding: 32px 0 0 0;
       .infoList {
         text-align: center;
         h1 {
           font-size: 1.6rem;
           margin-bottom: 13px;
         }
-        p {
-          font-size: 2.1rem;
+        .subText{
+          font-size: 1.8rem;
+          color: $mainColor;
         }
       }
     }
   }
 }
+.container main{margin: 0 auto;}
+.area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100vh;
+}
 
-header{display: none;}
+// header{display: none;}
 
 /* 992pxä»¥ä¸Š  vw@1080px*/
 @media (min-width: 992px) {}

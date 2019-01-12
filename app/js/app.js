@@ -1,15 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
   'use strict';
-  // Barba.Pjax.init();
-  //
-  // const Top = Barba.BaseView.extend({
-  //   namespace: 'top',
-  //   onEnterCompleted: () => {
-  //
-  //   }
-  // });
-  //
-  // Top.init();
 
   // 現在と同じページのリンクをクリックした場合、リロードをしない設定
 // リロードしたい場合は削除
@@ -23,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function(){
 // for(var i = 0; i < links.length; i++) {
 //   links[i].addEventListener('click', cbk);
 // }
-
+Barba.Pjax.start();
 // 新しいページが準備できたときにしたい処理
 Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, newPageRawHTML) {
 
