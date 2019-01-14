@@ -29,7 +29,7 @@
   <section class="topLogo">
     <div class="logoOuter">
       <a href="<?php echo home_url(); ?>/">
-        <div class="logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/logo.svg" alt="" width="" height=""></div>
+        <div class="logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/logo.svg" alt="" width="" height=""></div>
         <div class="myInfo">
           <div class="name"><span class="text">Yuki Niiuchi</span></div>
           <div class="detail"><span class="text">Front-End Engineer / Digital Marketing</span></div>
@@ -39,13 +39,13 @@
   </section>
   <section class="snsArea">
     <ul class="snsList">
-      <li class="sns"><a target="_blank" href="https://www.facebook.com/profile.php?id=100011467639939"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/facebook.png" alt=""></a></li>
-      <li class="sns"><a target="_blank" href="https://twitter.com/ni_you0ct"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/twitter.png" alt=""></a></li>
-      <li class="sns"><a target="_blank" href="https://www.instagram.com/ni_you0ct/?hl=en"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/iconfinder_38-instagram_1161953.png" alt=""></a></li>
-      <li class="sns"><a target="_blank" href="https://www.linkedin.com/in/%E5%8B%87%E6%A8%B9-%E4%BB%81%E4%BA%95%E5%86%85-653046166/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/iconfinder_linkedin_circle_black_107159.png" alt=""></a></li>
-      <li class="sns"><a target="_blank" href="https://github.com/niyou0ct/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/iconfinder_73-pinterest_104430.png" alt=""></a></li>
-      <li class="sns"><a target="_blank" href="https://www.pinterest.jp/axaebyxo11/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/iconfinder_mark-github_298822.png" alt=""></a></li>
-      <li class="sns"><a href="<?php echo home_url(); ?>/form/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/iconfinder_icon-at_211625.png" alt=""></a></li>
+      <li class="sns"><a target="_blank" href="https://www.facebook.com/profile.php?id=100011467639939"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/facebook.png" alt=""></a></li>
+      <li class="sns"><a target="_blank" href="https://twitter.com/ni_you0ct"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/twitter.png" alt=""></a></li>
+      <li class="sns"><a target="_blank" href="https://www.instagram.com/ni_you0ct/?hl=en"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/iconfinder_38-instagram_1161953.png" alt=""></a></li>
+      <li class="sns"><a target="_blank" href="https://www.linkedin.com/in/%E5%8B%87%E6%A8%B9-%E4%BB%81%E4%BA%95%E5%86%85-653046166/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/iconfinder_linkedin_circle_black_107159.png" alt=""></a></li>
+      <li class="sns"><a target="_blank" href="https://github.com/niyou0ct/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/iconfinder_73-pinterest_104430.png" alt=""></a></li>
+      <li class="sns"><a target="_blank" href="https://www.pinterest.jp/axaebyxo11/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/iconfinder_mark-github_298822.png" alt=""></a></li>
+      <li class="sns"><a href="<?php echo home_url(); ?>/form/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/iconfinder_icon-at_211625.png" alt=""></a></li>
     </ul>
   </section>
 </header>

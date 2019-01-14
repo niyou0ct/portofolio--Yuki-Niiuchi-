@@ -12,7 +12,12 @@ var header = require('gulp-header');
 var babel = require("gulp-babel");
 var runSequence = require('run-sequence');
 var connect = require('gulp-connect-php');
-
+var changed  = require('gulp-changed');
+var imagemin = require('gulp-imagemin');
+var imageminJpg = require('imagemin-jpegtran');
+var imageminPng = require('imagemin-optipng');
+var imageminGif = require('imagemin-gifsicle');
+var svgmin = require('gulp-svgmin');
 
 //sassコンパイル
 gulp.task("sass", function() {
@@ -40,6 +45,7 @@ gulp.task("php", function() {
         .pipe(gulp.dest("./"))
 });
 
+// 作成したjsファイルをbabelして圧縮化
 gulp.task('babel', function() {
   return gulp.src('./app/js/*.js')
     .pipe(plumber())
@@ -49,6 +55,7 @@ gulp.task('babel', function() {
     .pipe(gulp.dest('./js/min'));
 });
 
+// vendorのjsファイル管理
 gulp.task('js.vendor', function() {
   return gulp.src('./app/js/vendor/**/*.js')
     .pipe(plumber())
@@ -64,7 +71,7 @@ gulp.task("assets", function() {
     .pipe(gulp.dest("assets"))
 });
 
-
+// jsファイルを全て一つのファイルにまとめて圧縮化
 gulp.task('js.concat', function() {
   return gulp.src('./app/js/*.js')
     .pipe(plumber())
@@ -84,6 +91,34 @@ gulp.task('js.uglify', ['js.concat'], function() {
     .pipe(gulp.dest('./js/min'));
 });
 
+// jpg,png,gif画像の圧縮タスク
+gulp.task('imagemin', function(){
+  var srcGlob = './app/imgs/**/*.+(jpg|JPG|JPEG|jpeg|png|gif)';
+  var dstGlob = 'imgs';
+  gulp.src(srcGlob)
+      .pipe(changed(dstGlob))
+      .pipe(imagemin([
+        imageminPng(),
+        imageminJpg(),
+        imageminGif({
+          interlaced: false,
+          optimizationLevel: 3,
+          colors: 180
+        })
+      ]
+    ))
+    .pipe(gulp.dest(dstGlob));
+});
+
+// svg画像の圧縮タスク
+gulp.task('svgmin', function(){
+  var srcGlob = './app/imgs/**/*.+(svg)';
+  var dstGlob = 'imgs';
+  gulp.src(srcGlob)
+      .pipe(changed(dstGlob))
+      .pipe(svgmin())
+      .pipe(gulp.dest(dstGlob));
+});
 
 //gulpコマンド入力時にローカルサーバーを立ち上げる処理
 // gulp.task('server', function() {
@@ -97,6 +132,7 @@ gulp.task('js.uglify', ['js.concat'], function() {
 //   });
 // });
 
+// サーバー立ち上げ
 gulp.task('server', function() {
   browser.init({
     port: 8889,
@@ -118,14 +154,15 @@ gulp.task('watch', function(){
   gulp.watch('./app/js/*.js', ['babel']);
   gulp.watch('./app/js/vendor/**/*.js', ['js.vendor']);
   gulp.watch('./app/assets/**', ['assets']);
+  gulp.watch('./app/imgs/*', ['imagemin', 'svgmin']);
 });
 
 
 // commonタスクをまとめる
-gulp.task('common', ['sass', 'php', 'babel', 'js.vendor', 'assets', 'watch', 'server']);
+gulp.task('common', ['sass', 'php', 'babel', 'js.vendor', 'assets', 'imagemin', 'svgmin', 'watch', 'server']);
 
 // serverなしのタスクをまとめる
-gulp.task('run', ['sass', 'php', 'babel', 'js.vendor', 'assets', 'watch']);
+gulp.task('run', ['sass', 'php', 'babel', 'js.vendor', 'assets', 'imagemin', 'svgmin', 'watch']);
 
 // 監視して処理するのをひとまとめにしておく。
 gulp.task('js', ['js.concat', 'js.uglify']);

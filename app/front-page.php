@@ -53,13 +53,13 @@
      <div class="firstInner">
 
        <div class="leadText">
-         <p><span>Easy Websites for User</span></p>
+         <p><span>Innovative Business</span></p>
        </div>
 
        <section class="mainTitle">
          <div class="infoList">
            <h1 style="display: none;">Yuki Niiuchi</h1>
-           <span class="subText">あるべき形をWebサイトに</span>
+           <span class="subText">経営戦略で欠かせない重要な役割を果たすWebサイトを制作します。</span>
          </div>
        </section>
 

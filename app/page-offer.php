@@ -39,7 +39,7 @@ Template Name: offer
             <li class="offer">
               <h3 class="head">企画戦略立案</h3>
               <div class="detailArea">
-                <div class="icon concept"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/presentatin1.png" alt="concept"></div>
+                <div class="icon concept"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/presentatin1.png" alt="concept"></div>
                 <div class="text">
                   <p>貴社の事業目的を果たすためにWebサイトはどういった役割を担えば良いか考察し、Webサイトの存在意義、流入ターゲット、コンセプト設計、カスタマージャーニー作成、コンテンツ企画、ワイヤー作成といったWeb戦略を立案します。</p>
                 </div>
@@ -48,7 +48,7 @@ Template Name: offer
             <li class="offer">
               <h3 class="head">デザイン設計</h3>
               <div class="detailArea">
-                <div class="icon design"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/design.png" alt="design"></div>
+                <div class="icon design"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/design.png" alt="design"></div>
                 <div class="text">
                   <p>Webサイトのデザインをおこないます。この時、上流工程で定めた流入ターゲットにとって「使いやすい」「分かりやすい」「受け入れやすい」デザイン制作を心がけます。デザイン時にアニメーションのことも考えるので動きを動きがあるWebデザインをおこないます。</p>
                 </div>
@@ -57,7 +57,7 @@ Template Name: offer
             <li class="offer">
               <h3 class="head">コーディング</h3>
               <div class="detailArea">
-                <div class="icon coding"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/imgs/prog.png" alt="coding"></div>
+                <div class="icon coding"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/prog.png" alt="coding"></div>
                 <div class="text">
                   <p>SEOを考慮したコーディングをおこないます。動きのあるWebサイトのコーディングはもちろん、自分たちで更新できるサイトをWordpressで実装することも可能です。通信速度が良好でストレスを感じさせないコーディングを心がけています。</p>
                 </div>
