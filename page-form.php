@@ -9,7 +9,7 @@ Template Name: form
 <div id="barba-wrapper" class="container">
 <main data-namespace="form" class="barba-container">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/min/form.min.css">
-  <section class="area">
+  <div class="area">
     <div class="layoutOuter">
      <div class="areaTitle">
        <h2>Contact</h2>
@@ -42,7 +42,7 @@ Template Name: form
        </div>
      </div>
    </div>
-  </section>
+ </div>
 </main>
 </div>
 <?php get_template_part('nav'); ?>

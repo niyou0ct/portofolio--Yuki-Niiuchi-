@@ -50,7 +50,7 @@ Template Name: offer
               <div class="detailArea">
                 <div class="icon design"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/design.png" alt="design"></div>
                 <div class="text">
-                  <p>Webサイトのデザインをおこないます。この時、上流工程で定めた流入ターゲットにとって「使いやすい」「分かりやすい」「受け入れやすい」デザイン制作を心がけます。デザイン時にアニメーションのことも考えるので動きを動きがあるWebデザインをおこないます。</p>
+                  <p>Webサイトのデザインをおこないます。この時、上流工程で定めた流入ターゲットにとって「使いやすい」「分かりやすい」「受け入れやすい」デザイン制作を心がけます。デザイン時にアニメーションのことも考えるので動きがあるWebデザインをおこないます。</p>
                 </div>
               </div>
             </li>

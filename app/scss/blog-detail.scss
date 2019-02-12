@@ -1,0 +1,112 @@
+@import 'reset';
+@import 'common';
+
+.blog-search-area{
+  margin: $middleSpace 0;
+  .search-box{
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    position: relative;
+  }
+  .search-box-input-area{
+  }
+  .search-box-input-area_action{
+    border: none;
+    outline: none;
+    width: 300px;
+    font-size: 1.4rem;
+    border: 1px solid $mainColor;
+    border-radius: 30px;
+    padding: 8px 40px 8px 12px;
+    :focus{
+      outline: #000;
+    }
+  }
+  .search-box-icon-area{
+    position: absolute;
+    right: 12px;
+  }
+  .search-box-icon-area_text{
+    font-size: 1.8rem;
+  }
+}
+
+.blog-othres-list{
+  display: flex;
+  flex-wrap: wrap;
+  .blog-item.__others{
+    width: 31.3%;
+    &+ .blog-item.__others{
+      margin-left: 3%;
+    }
+    &:nth-child(3n+1){
+      margin-left: 0 !important;
+    }
+    &:nth-child(n+4){
+      margin-top: $middleSpace;
+    }
+    .blog-link{
+      display: block;
+    }
+    .blog-media-outer{
+      overflow: hidden;
+    }
+    .blog-media{
+      position: relative;
+      height: 160px;
+      background-position: center;
+      transition: .3s ease-out;
+      &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        transition: .3s ease-out;
+      }
+    }
+    .blog-textbox{
+    }
+    .blog-titlebox_text{
+      display: block;
+      font-size: 1.8rem;
+      line-height: 1.5;
+    }
+    .blog-others{
+      display: flex;
+      align-items: baseline;
+      margin: 20px 0 14px;
+    }
+    .blog-share_text{
+      display: inline-block;
+      margin: 0 14px 0 4px;
+      font-size: 1.2rem;
+    }
+    .blog-share_text.__number{
+      font-size: 1.4rem;
+      margin: 0;
+    }
+    .blog-category_text{
+      font-size: 1.2rem;
+    }
+    &:hover .blog-media{
+      transform: scale(1.1);
+      &::after{
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+
+
+/* 992pxä»¥ä¸Š  vw@1080px*/
+@media (min-width: 992px) {}
+
+/* 1200pxä»¥ä¸Š */
+@media (min-width: 1200px) {}
+
+@media (min-width: 1680px) {}

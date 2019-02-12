@@ -96,21 +96,52 @@ header {
     }
   }
   .snsArea{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    font-size: 0;
+    .fa-share-alt{
+      color: $mainColor;
+      font-size: 2.0rem;
+      opacity: 1;
+      transition: .2s;
+      &.on{
+        opacity: 0;
+      }
+    }
     .snsList{
-      display: flex;
+      display: none;
       align-items: center;
+      overflow: hidden;
       .sns{
         width: 30px;
+        transform: rotate(-45deg) translateX(1000%);
+        opacity: 0;
+        transform-origin: center;
+        +.sns{
+          margin: 0 0 0 14px;
+        }
         img{
           width: 100%;
-          max-width: 100%;
-          height:auto;
+          height: auto;
         }
-        +.sns{
-          margin: 0 0 0 20px;
+        &.on{
+          animation: .5s forwards;
+          animation-name: snsAppOn;
         }
       }
     }
+  }
+}
+
+@keyframes snsAppOn{
+  from{
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+  to{
+    transform: rotate(0) translateX(0);
+    opacity: 1;
   }
 }
 
@@ -140,7 +171,7 @@ header {
 nav {
   position: fixed;
   top: 25%;
-  right: 5%;
+  right: 3%;
   font-size: 1.6rem;
   z-index: 10;
   .navList .navItem {
@@ -226,6 +257,6 @@ nav {
 @media (min-width: 992px) {}
 
 /* 1200pxä»¥ä¸Š */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {body{max-width: 1280px;}}
 
 @media (min-width: 1680px) {}

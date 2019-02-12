@@ -14,6 +14,9 @@
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
   <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/libs/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/build/three.min.js"></script>
@@ -47,5 +50,6 @@
       <li class="sns"><a target="_blank" href="https://www.pinterest.jp/axaebyxo11/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/iconfinder_mark-github_298822.png" alt=""></a></li>
       <li class="sns"><a href="<?php echo home_url(); ?>/form/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/iconfinder_icon-at_211625.png" alt=""></a></li>
     </ul>
+    <i class="fas fa-share-alt"></i>
   </section>
 </header>

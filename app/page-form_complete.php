@@ -35,7 +35,7 @@ mb_send_mail($to, $subject, $message, $headers);
   <input hidden type="text" value="<?php echo $name1; ?>">
   <input hidden type="text" value="<?php echo $to; ?>">
   <input hidden type="text" value="<?php echo $from; ?>">
-  <section class="area">
+  <div class="area">
     <div class="layoutOuter">
      <div class="areaTitle">
        <h2>Contact</h2>
@@ -49,7 +49,7 @@ mb_send_mail($to, $subject, $message, $headers);
        </div>
      </div>
    </div>
-  </section>
+ </div>
 </main>
 </div>
 <?php get_template_part('nav'); ?>

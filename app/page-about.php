@@ -10,7 +10,7 @@ Template Name: about
   <main data-namespace="about" class="barba-container">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/min/about.min.css">
 
-    <section class="area">
+    <div class="area">
       <div class="layoutOuter">
         <div class="areaTitle">
           <h2>Front-End Engineer</h2>
@@ -46,7 +46,7 @@ Template Name: about
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 </div>
 

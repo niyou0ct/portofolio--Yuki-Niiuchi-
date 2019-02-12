@@ -64,6 +64,8 @@ Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container
 
 }); // End Dispatcher
 
+// function 
+
 // ページ遷移トランジション
 var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
@@ -146,5 +148,41 @@ function getWritten(fileName, callback) {
   );
   frameDocument.close();
 }
+
+function snsApp(){
+  let snsArea = document.querySelector('.snsArea');
+  let shareIcon = document.querySelector('.fa-share-alt');
+  let snsBox = document.querySelector('.snsList');
+  let snsLists = document.querySelectorAll('.sns');
+  let snsTotal = snsLists.length;
+
+  let isShown = 0;
+
+  function snsOn(){
+    shareIcon.classList.add('on');
+    snsBox.style.display = 'flex';
+    for(let i=0; i<snsLists.length; i++){
+      setTimeout(() => {
+        snsLists[i].classList.add('on');
+      }, 50 * (i + 0.5));
+    }
+  }
+
+  function snsOff(){
+    for(let i=0; i<snsLists.length; i++){
+      setTimeout(() => {
+        snsLists[i].classList.remove('on');
+      }, 50 * (i + 0.5));
+    }
+    setTimeout(() => {
+      snsBox.style.display = 'none';
+      shareIcon.classList.remove('on');
+    }, 500);
+  }
+
+  snsArea.addEventListener('mouseenter', snsOn, false);
+  snsArea.addEventListener('mouseleave', snsOff, false);
+}
+snsApp();
 
 }, false);

@@ -23,6 +23,8 @@ function disable_emoji()
 }
 add_action('init', 'disable_emoji');
 
+add_theme_support( 'post-thumbnails' );
+
 function pagename_class($classes = '') {
 if(is_page()) {
     $page = get_post(get_the_ID());
@@ -113,5 +115,122 @@ function mytheme_comment($comment, $args, $depth) {
     <?php
     }
 
+// カスタム投稿タイプ追加
+function create_post_type(){
+  // blog追加
+  $blogSupports = [
+    'title',
+    'editor',
+    'author',
+    'thumbnail',
+    'revisions'
+  ];
+  register_post_type('blog',
+    array(
+      'label' => 'Blog',
+      'public' => true,
+      'rewrite' => array( 'slug' => 'blog' ),
+      'has_archive' => true,
+      'menu_position' => 5,
+      'supports' => $blogSupports
+    )
+  );
 
+  // work追加
+  $workSupports = [
+    'title',
+    'editor',
+    'thumbnail',
+    'revisions'
+  ];
+  register_post_type('work',
+    array(
+      'label' => 'Work',
+      'public' => true,
+      'rewrite' => array( 'slug' => 'blog' ),
+      'has_archive' => true,
+      'menu_position' => 5,
+      'supports' => $workSupports
+    )
+  );
+}
+add_action('init', 'create_post_type');
+
+// blog, workタクソノミー追加
+register_taxonomy(
+  'blog_taxonomy',
+  'blog',
+  array(
+    'label' => 'Blogカテゴリー',
+    'labels' => array(
+      'all_items' => 'カテゴリー一覧',
+      'add_new_item' => '新規カテゴリー追加',
+      'hierarchical' => true
+    )
+  )
+);
+register_taxonomy(
+  'work_taxonomy',
+  'work',
+  array(
+    'label' => 'Workカテゴリー',
+    'labels' => array(
+      'all_items' => 'カテゴリー一覧',
+      'add_new_item' => '新規カテゴリー追加',
+      'hierarchical' => true
+    )
+  )
+);
+
+// カスタムフィールド追加
+function add_work_fields(){
+  add_meta_box('work-setting', 'その他の情報', 'insert_work_fields', 'work', 'normal');
+}
+add_action('admin_menu', 'add_work_fields');
+
+function insert_work_fields(){
+  global $post;
+
+  echo '担当領域: <input type="text" name="work-position" value="'.get_post_meta($post->ID, 'work-position', true).'" size="50">';
+}
+
+function save_work_fields($post_id){
+  if(!empty($_POST['work-position'])){
+    update_post_meta($post_id, 'work-position', $_POST['work-position']);
+  }else{
+    delete_post_meta($post_id, 'work-name');
+  }
+}
+add_action('save_post', 'save_work_fields');
+
+
+// 記事のアクセス数を計測
+function set_post_views($postID){
+  $count_key = 'post_views_count';
+  $count = get_post_meta($post, $count_key, true);
+  if($count=''){
+    $count=0;
+    delete_post_meta($postID, $count_key);
+    add_post_meta($postID, $count_key, '0');
+  }else{
+    $count++;
+    update_post_meta($postID, $count_key, $count);
+  }
+}
+// クローラーのアクセス判別
+function is_bot(){
+  $ua = $_SERVER['HTTP_USER_AGENT'];
+
+  $bot = array(
+    'googlebot',
+    'msnbot',
+    'yahoo'
+  );
+  foreach($bot as $bot){
+    if(stripos($ua, $bot) !== false){
+      return true;
+    }
+  }
+  return false;
+}
 ?>
