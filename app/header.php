@@ -32,7 +32,7 @@
   <section class="topLogo">
     <div class="logoOuter">
       <a href="<?php echo home_url(); ?>/">
-        <div class="logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/logo.svg" alt="" width="" height=""></div>
+        <div class="logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/imgs/logo_portofolio_ver2.svg" alt="" width="" height=""></div>
         <div class="myInfo">
           <div class="name"><span class="text">Yuki Niiuchi</span></div>
           <div class="detail"><span class="text">Front-End Engineer / Digital Marketing</span></div>

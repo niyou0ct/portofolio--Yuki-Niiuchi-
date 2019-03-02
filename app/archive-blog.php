@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: blog-archive
-*/
-?>
-
 <?php get_header(); ?>
 <div id="barba-wrapper" class="container">
   <main data-namespace="blog" class="barba-container">
@@ -59,7 +53,7 @@ Template Name: blog-archive
                   <div class="search-box-icon-area"><i class="search-box-icon-area_text fas fa-search"></i></div>
                 </div>
               </div>
-              <div class="blog-othres-list">
+              <div class="blog-others-list">
                 <?php elseif($loop_count >= 2): ?>
                 <li class="blog-item __others">
                   <a href="<?php the_permalink(); ?>" class="blog-link">

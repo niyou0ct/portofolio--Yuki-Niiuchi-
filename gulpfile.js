@@ -135,9 +135,9 @@ gulp.task('svgmin', function(){
 // サーバー立ち上げ
 gulp.task('server', function() {
   browser.init({
-    port: 8889,
+    port: 8890,
     server: {
-      baseDir: './'
+      baseDir: ''
     }
   });
 });

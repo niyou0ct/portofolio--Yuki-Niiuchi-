@@ -43,7 +43,6 @@ add_filter( 'allow_major_auto_core_updates', '__return_true' );
 //マイナーアップグレードの自動更新を有効化
 add_filter( 'allow_minor_auto_core_updates', '__return_true' );
 
-
 // 概要の文字数調整
 function my_excerpt_length($length) {
     return 80;
@@ -129,9 +128,10 @@ function create_post_type(){
     array(
       'label' => 'Blog',
       'public' => true,
-      'rewrite' => array( 'slug' => 'blog' ),
+      'rewrite' => true,
       'has_archive' => true,
       'menu_position' => 5,
+      'hierarchical' => false,
       'supports' => $blogSupports
     )
   );
@@ -147,7 +147,7 @@ function create_post_type(){
     array(
       'label' => 'Work',
       'public' => true,
-      'rewrite' => array( 'slug' => 'blog' ),
+      'rewrite' => true,
       'has_archive' => true,
       'menu_position' => 5,
       'supports' => $workSupports

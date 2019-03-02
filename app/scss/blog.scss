@@ -48,7 +48,7 @@
 
 .blog-hero-media{
   height: 300px;
-  background: no-repeat center;
+  background-position: center;
   background-size: cover;
   transition: .3s ease-out;
   &:hover{
@@ -97,7 +97,7 @@
   }
 }
 
-.blog-othres-list{
+.blog-others-list{
   display: flex;
   flex-wrap: wrap;
   .blog-item.__others{
@@ -120,7 +120,7 @@
     .blog-media{
       position: relative;
       height: 160px;
-      background-position: center;
+      background-size: cover;
       transition: .3s ease-out;
       &::after{
         content: "";
@@ -137,7 +137,7 @@
     }
     .blog-titlebox_text{
       display: block;
-      font-size: 1.8rem;
+      font-size: $archiveTitle;
       line-height: 1.5;
     }
     .blog-others{
@@ -148,14 +148,14 @@
     .blog-share_text{
       display: inline-block;
       margin: 0 14px 0 4px;
-      font-size: 1.2rem;
+      font-size: $archiveShare;
     }
     .blog-share_text.__number{
-      font-size: 1.4rem;
+      font-size: $archiveShareNumber;
       margin: 0;
     }
     .blog-category_text{
-      font-size: 1.2rem;
+      font-size: $archiveCategory;
     }
     &:hover .blog-media{
       transform: scale(1.1);
